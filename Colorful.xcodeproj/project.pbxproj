@@ -7,22 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E06990324A5267700EBDCBF /* EncodingTypeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E06990224A5267700EBDCBF /* EncodingTypeMenuController.swift */; };
+		9E06990524A5358C00EBDCBF /* ColorfulState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E06990424A5358C00EBDCBF /* ColorfulState.swift */; };
+		9E2AA2F024A3A3F500F200A9 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2AA2EF24A3A3F500F200A9 /* StatusBarController.swift */; };
 		9E39B29C24A2DDF000D20438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39B29B24A2DDF000D20438 /* AppDelegate.swift */; };
 		9E39B29E24A2DDF000D20438 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39B29D24A2DDF000D20438 /* ViewController.swift */; };
 		9E39B2A124A2DDF000D20438 /* Colorful.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E39B29F24A2DDF000D20438 /* Colorful.xcdatamodeld */; };
 		9E39B2A324A2DDF200D20438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E39B2A224A2DDF200D20438 /* Assets.xcassets */; };
-		9E39B2A624A2DDF200D20438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E39B2A424A2DDF200D20438 /* Main.storyboard */; };
+		9E39B2B124A2DEE200D20438 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39B2B024A2DEE200D20438 /* main.swift */; };
+		9E39B2B524A35AD000D20438 /* Colorful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39B2B424A35AD000D20438 /* Colorful.swift */; };
+		9E39B2B724A35C9F00D20438 /* PasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39B2B624A35C9F00D20438 /* PasteboardManager.swift */; };
+		9EA73D1324A3E205002F32D9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA73D1224A3E205002F32D9 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E06990224A5267700EBDCBF /* EncodingTypeMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingTypeMenuController.swift; sourceTree = "<group>"; };
+		9E06990424A5358C00EBDCBF /* ColorfulState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulState.swift; sourceTree = "<group>"; };
+		9E2AA2EF24A3A3F500F200A9 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		9E39B29824A2DDF000D20438 /* Colorful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E39B29B24A2DDF000D20438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E39B29D24A2DDF000D20438 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E39B2A024A2DDF000D20438 /* Colorful.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Colorful.xcdatamodel; sourceTree = "<group>"; };
 		9E39B2A224A2DDF200D20438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9E39B2A524A2DDF200D20438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E39B2A724A2DDF200D20438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E39B2A824A2DDF200D20438 /* Colorful.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Colorful.entitlements; sourceTree = "<group>"; };
+		9E39B2B024A2DEE200D20438 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9E39B2B424A35AD000D20438 /* Colorful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorful.swift; sourceTree = "<group>"; };
+		9E39B2B624A35C9F00D20438 /* PasteboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardManager.swift; sourceTree = "<group>"; };
+		9EA73D1224A3E205002F32D9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +70,16 @@
 				9E39B29B24A2DDF000D20438 /* AppDelegate.swift */,
 				9E39B29D24A2DDF000D20438 /* ViewController.swift */,
 				9E39B2A224A2DDF200D20438 /* Assets.xcassets */,
-				9E39B2A424A2DDF200D20438 /* Main.storyboard */,
 				9E39B2A724A2DDF200D20438 /* Info.plist */,
 				9E39B2A824A2DDF200D20438 /* Colorful.entitlements */,
 				9E39B29F24A2DDF000D20438 /* Colorful.xcdatamodeld */,
+				9E39B2B024A2DEE200D20438 /* main.swift */,
+				9E39B2B424A35AD000D20438 /* Colorful.swift */,
+				9E39B2B624A35C9F00D20438 /* PasteboardManager.swift */,
+				9E2AA2EF24A3A3F500F200A9 /* StatusBarController.swift */,
+				9EA73D1224A3E205002F32D9 /* Color.swift */,
+				9E06990224A5267700EBDCBF /* EncodingTypeMenuController.swift */,
+				9E06990424A5358C00EBDCBF /* ColorfulState.swift */,
 			);
 			path = Colorful;
 			sourceTree = "<group>";
@@ -93,7 +111,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Zack Radisic";
 				TargetAttributes = {
 					9E39B29724A2DDF000D20438 = {
@@ -125,7 +143,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E39B2A324A2DDF200D20438 /* Assets.xcassets in Resources */,
-				9E39B2A624A2DDF200D20438 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,24 +153,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E39B2B724A35C9F00D20438 /* PasteboardManager.swift in Sources */,
+				9E2AA2F024A3A3F500F200A9 /* StatusBarController.swift in Sources */,
 				9E39B2A124A2DDF000D20438 /* Colorful.xcdatamodeld in Sources */,
+				9E06990324A5267700EBDCBF /* EncodingTypeMenuController.swift in Sources */,
+				9E39B2B524A35AD000D20438 /* Colorful.swift in Sources */,
+				9EA73D1324A3E205002F32D9 /* Color.swift in Sources */,
 				9E39B29E24A2DDF000D20438 /* ViewController.swift in Sources */,
+				9E39B2B124A2DEE200D20438 /* main.swift in Sources */,
 				9E39B29C24A2DDF000D20438 /* AppDelegate.swift in Sources */,
+				9E06990524A5358C00EBDCBF /* ColorfulState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		9E39B2A424A2DDF200D20438 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E39B2A524A2DDF200D20438 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9E39B2A924A2DDF200D20438 /* Debug */ = {
@@ -274,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Colorful/Colorful.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 469ZHHB7ZW;
@@ -294,6 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Colorful/Colorful.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 469ZHHB7ZW;
