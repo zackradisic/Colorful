@@ -9,6 +9,6 @@
 import AppKit
 
 class ColorfulState: NSObject {
-    
-    public static var encodingType: Color.EncodingType = Color.EncodingType.Hex
+  
+  public static var encodingType: Color.EncodingType = Color.EncodingType.Hex
 }
