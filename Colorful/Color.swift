@@ -75,6 +75,8 @@ class Color: NSObject {
     }
     
     static func toRGB(input: Int) -> String {
+        // Shift the bits to the right by the appropriate amount,
+        // and apply a bit mask of 255 to isolate the bits we want.
         let r = (input >> 16) & 0xFF
         let g = (input >> 8) & 0xFF
         let b = input & 0xFF

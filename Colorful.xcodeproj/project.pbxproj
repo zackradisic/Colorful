@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01F30918CA8EF103A6B93D78 /* libPods-Colorful.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40464C2BC8E57F887808D21D /* libPods-Colorful.a */; };
 		9E06990324A5267700EBDCBF /* EncodingTypeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E06990224A5267700EBDCBF /* EncodingTypeMenuController.swift */; };
 		9E06990524A5358C00EBDCBF /* ColorfulState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E06990424A5358C00EBDCBF /* ColorfulState.swift */; };
 		9E2AA2F024A3A3F500F200A9 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2AA2EF24A3A3F500F200A9 /* StatusBarController.swift */; };
@@ -21,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40464C2BC8E57F887808D21D /* libPods-Colorful.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Colorful.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6777F61BE7F75F0A889DEEEC /* Pods-Colorful.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colorful.debug.xcconfig"; path = "Target Support Files/Pods-Colorful/Pods-Colorful.debug.xcconfig"; sourceTree = "<group>"; };
+		948C462C5EB5B3BDE2E2467D /* Pods-Colorful.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colorful.release.xcconfig"; path = "Target Support Files/Pods-Colorful/Pods-Colorful.release.xcconfig"; sourceTree = "<group>"; };
 		9E06990224A5267700EBDCBF /* EncodingTypeMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingTypeMenuController.swift; sourceTree = "<group>"; };
 		9E06990424A5358C00EBDCBF /* ColorfulState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulState.swift; sourceTree = "<group>"; };
 		9E2AA2EF24A3A3F500F200A9 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
@@ -42,17 +46,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F30918CA8EF103A6B93D78 /* libPods-Colorful.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F4597F890E88D94AE56FDEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6777F61BE7F75F0A889DEEEC /* Pods-Colorful.debug.xcconfig */,
+				948C462C5EB5B3BDE2E2467D /* Pods-Colorful.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9480E26B0C4F136453F299E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40464C2BC8E57F887808D21D /* libPods-Colorful.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9E39B28F24A2DDF000D20438 = {
 			isa = PBXGroup;
 			children = (
 				9E39B29A24A2DDF000D20438 /* Colorful */,
 				9E39B29924A2DDF000D20438 /* Products */,
+				1F4597F890E88D94AE56FDEF /* Pods */,
+				9480E26B0C4F136453F299E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +116,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E39B2AB24A2DDF200D20438 /* Build configuration list for PBXNativeTarget "Colorful" */;
 			buildPhases = (
+				254C14F969471E6E972D7207 /* [CP] Check Pods Manifest.lock */,
 				9E39B29424A2DDF000D20438 /* Sources */,
 				9E39B29524A2DDF000D20438 /* Frameworks */,
 				9E39B29624A2DDF000D20438 /* Resources */,
@@ -147,6 +173,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		254C14F969471E6E972D7207 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Colorful-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9E39B29424A2DDF000D20438 /* Sources */ = {
@@ -284,6 +335,7 @@
 		};
 		9E39B2AC24A2DDF200D20438 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6777F61BE7F75F0A889DEEEC /* Pods-Colorful.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Colorful/Colorful.entitlements;
@@ -305,6 +357,7 @@
 		};
 		9E39B2AD24A2DDF200D20438 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948C462C5EB5B3BDE2E2467D /* Pods-Colorful.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Colorful/Colorful.entitlements;

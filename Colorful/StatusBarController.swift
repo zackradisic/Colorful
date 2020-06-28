@@ -21,8 +21,11 @@ class StatusBarController: NSObject {
             withLength: NSStatusItem.squareLength)
         statusBarItem!.button?.title = "🎨"
         
+        statusBarItem?.view =
         let statusBarMenu = NSMenu(title: "Colorful")
         statusBarItem!.menu = statusBarMenu
+        statusBarItem?.button.add
+        
         
         
         setupPreferredColorEndodingMenu(statusBarMenu)
