@@ -18,15 +18,17 @@ class EncodingTypeMenuController: NSObject {
     
     let hex = createSelectColorItem(encodingType: Color.EncodingType.Hex, target: target)
     let rgb = createSelectColorItem(encodingType: Color.EncodingType.RGB, target: target)
-    
+    let hsl = createSelectColorItem(encodingType: Color.EncodingType.HSL, target: target)
+
     menu.addItem(hex)
     menu.addItem(rgb)
+    menu.addItem(hsl)
     menu.showsStateColumn = true
     setActive(encodingType: ColorfulState.encodingType)
     
     hex.target = target
     rgb.target = target
-    
+    hsl.target = target
   }
   
   func createSelectColorItem(encodingType: Color.EncodingType, target: AnyObject) -> NSMenuItem {

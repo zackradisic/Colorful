@@ -76,13 +76,19 @@ class Color: NSObject {
   }
 
   static func toRGB(input: Int) -> String {
+    let components = getRGBComponents(input: input)
+
+    return "rgb(\(components.R), \(components.B), \(components.G))"
+  }
+
+  static func getRGBComponents(input: Int) -> (R: Int, B: Int, G: Int) {
     // Shift the bits to the right by the appropriate amount,
     // and apply a bit mask of 255 to isolate the bits we want.
-    let r = (input >> 16) & 0xFF
-    let g = (input >> 8) & 0xFF
-    let b = input & 0xFF
-
-    return "rgb(\(r), \(b), \(g))"
+    (
+      R: (input >> 16) & 0xFF,
+      G: (input >> 8) & 0xFF,
+      B: input & 0xFF
+    )
   }
 
   static func getRGBValue(input: String) -> Int {
@@ -103,6 +109,39 @@ class Color: NSObject {
     })
   }
 
+  static func toHSL(input: Int) -> String {
+    let components = getHSLComponents(input: input)
+    return "hsl(\(components.H), \(components.S)%, \(components.L)%)"
+  }
+
+  static func getHSLComponents(input: Int) -> (H: Int, S: Int, L: Int) {
+    let rgb = getRGBComponents(input: input)
+    let r = Float(rgb.R) / Float(255)
+    let b = Float(rgb.B) / Float(255)
+    let g = Float(rgb.G) / Float(255)
+
+    let cMax = max(max(r, g), b)
+    let cMin = min(min(r, g), b)
+
+    let delta = cMax - cMin
+
+    var hue: Float = 0
+    if cMax == r {
+      hue = (g - b) / delta
+    } else if cMax == g {
+      hue = 2 + ((b - r) / delta)
+    } else {
+      hue = 4 + ((r - g) / delta)
+    }
+
+    hue *= 60
+
+    let lightness = (cMax + cMin) / 2
+    let saturation = delta == 0 ? 0 : delta / cMax
+
+    return (H: Int(hue), S: Int(saturation * 100), L: Int(lightness * 100))
+  }
+
   static func convert(input: String, from: EncodingType, to: EncodingType) -> String? {
     if (from == to) {
       return nil
@@ -118,7 +157,7 @@ class Color: NSObject {
     case .RGBA:
       return nil
     case .HSL:
-      return nil
+      return toHSL(input: value)
     }
   }
 }
